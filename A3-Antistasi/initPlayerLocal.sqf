@@ -92,7 +92,7 @@ _introShot =
     ]
     ] spawn BIS_fnc_establishingShot;
 
-_titulo = if (worldName == "Tanoa") then {["Warlords of the Pacific","by Barbolani",antistasiVersion] spawn BIS_fnc_infoText} else {if (hayIFA) then {["Armia Krajowa","by Barbolani",antistasiVersion] spawn BIS_fnc_infoText} else {["Antistasi","by Barbolani",antistasiVersion] spawn BIS_fnc_infoText}};
+_titulo = if (worldName == "Malden") then {["Antistasi: Malden","by Barbolani","ported by Evoke",antistasiVersion] spawn BIS_fnc_infoText} else {if (hayIFA) then {["Armia Krajowa","by Barbolani",antistasiVersion] spawn BIS_fnc_infoText} else {["Antistasi","by Barbolani",antistasiVersion] spawn BIS_fnc_infoText}};
 disableUserInput false;
 player addWeaponGlobal "itemmap";
 if !(hayIFA) then {player addWeaponGlobal "itemgps"};
@@ -619,7 +619,7 @@ _nul = [player] execVM "OrgPlayers\unitTraits.sqf";
 grupoPetros = group petros;
 grupoPetros setGroupIdGlobal ["Petros","GroupColor4"];
 petros setIdentity "amiguete";
-petros setName "Jacque";
+petros setName "Petros";
 petros disableAI "MOVE";
 petros disableAI "AUTOTARGET";
 petros addAction ["Mission Request", {nul=CreateDialog "mission_menu";},nil,0,false,true,"","_this == theBoss"];

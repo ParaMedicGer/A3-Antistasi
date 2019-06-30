@@ -38,8 +38,8 @@ AAStaticSDKB = "B_AA_01_weapon_F";
 MortStaticSDKB = "B_Mortar_01_weapon_F";
 soporteStaticSDKB3 = "B_Mortar_01_support_F";
 
-civCar = "C_Offroad_01_F";
-civTruck = "C_Van_01_transport_F";
+civCar = "C_Offroad_02_unarmed_F";
+civTruck = "C_Truck_02_transport_F";
 civHeli = "C_Heli_Light_01_civil_F";
 civBoat = "C_Boat_Transport_02_F";
 
@@ -50,16 +50,16 @@ ATMineMag = "ATMine_Range_Mag";
 APERSMineMag = "APERSMine_Range_Mag";
 if (gameMode != 4) then
 	{
-	FIARifleman = "I_C_Soldier_Para_7_F";
-	FIAMarksman = "I_C_Soldier_Para_2_F";
-	vehFIAArmedCar = "I_C_Offroad_02_LMG_F";
-	vehFIATruck = "I_C_Van_01_transport_F";
-	vehFIACar = "I_C_Offroad_02_unarmed_F";
-	gruposFIASmall = [["I_C_Soldier_Para_6_F",FIARifleman],[FIAMarksman,FIARifleman],[FIAMarksman,FIAMarksman]];//["IRG_InfSentry","IRG_ReconSentry","IRG_SniperTeam_M"];///
-	gruposFIAMid = [["I_C_Soldier_Para_2_F","I_C_Soldier_Para_6_F","I_C_Soldier_Para_7_F","I_C_Soldier_Para_4_F"],["I_C_Soldier_Para_2_F","I_C_Soldier_Para_6_F","I_C_Soldier_Para_7_F","I_C_Soldier_Para_5_F"]];
-	FIASquad = ["I_C_Soldier_Para_2_F","I_C_Soldier_Para_6_F","I_C_Soldier_Para_7_F","I_C_Soldier_Para_4_F","I_C_Soldier_Para_1_F","I_C_Soldier_Para_7_F","I_C_Soldier_Para_8_F","I_C_Soldier_Para_3_F"];//"IRG_InfSquad";///
+	FIARifleman = "I_G_Soldier_lite_F";
+	FIAMarksman = "I_G_Soldier_M_F";
+	vehFIAArmedCar = "I_G_Offroad_01_armed_F";
+	vehFIATruck = "I_G_Van_01_transport_F";
+	vehFIACar = "I_G_Offroad_01_F";
+	gruposFIASmall = [["I_G_Soldier_GL_F",FIARifleman],[FIAMarksman,FIARifleman],[FIAMarksman,"I_G_Sharpshooter_F"]];//["IRG_InfSentry","IRG_ReconSentry","IRG_SniperTeam_M"];///
+	gruposFIAMid = [["I_G_Soldier_TL_F","I_G_Soldier_LAT2_F","I_G_Soldier_lite_F","I_G_Sharpshooter_F"],["I_G_Soldier_TL_F","I_G_medic_F","I_G_Soldier_F","I_G_Soldier_AR_F"]];
+	FIASquad = ["I_G_Soldier_SL_F","I_G_Soldier_LAT2_F","I_G_Soldier_lite_F","I_G_Sharpshooter_F","I_G_Soldier_GL_F","I_G_Soldier_F","I_G_medic_F","I_G_Soldier_AR_F"];//"IRG_InfSquad";///
 	gruposFIASquad = [FIASquad];
-	factionFIA = "IND_C_F";
+	factionFIA = "IND_G_F";
 	}
 else
 	{
@@ -75,10 +75,10 @@ else
 	factionFIA = "";
 	};
 
-vehPoliceCar = vehFIACar;
-policeOfficer = FIARifleman;
-policeGrunt = FIARifleman;
+vehPoliceCar = "HMMWV_M1035";
+policeOfficer = "spu_soldier_TL";
+policeGrunt = "spu_soldier_R3";
 gruposNATOGen = [policeOfficer,policeGrunt];
 nameBuenos = "FIA";
 
-factionGEN = "IND_C_F";
+factionGEN = "spu_battalion";

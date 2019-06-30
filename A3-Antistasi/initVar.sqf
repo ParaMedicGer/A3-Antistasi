@@ -220,17 +220,17 @@ if (!hayIFA) then
 	{
 	if (!activeUSAF) then
 		{
-		call compile preProcessFileLineNumbers "Templates\malosVanilla.sqf";
+		call compile preProcessFileLineNumbers "Templates\malosVanillaAltisB.sqf";
 		}
 	else
 		{
 		if (buenos == independent) then {call compile preProcessFileLineNumbers "Templates\malosRHSUSAF.sqf"} else {call compile preProcessFileLineNumbers "Templates\buenosRHSUSAF.sqf"};
 		};
-	if (!activeAFRF) then {call compile preProcessFileLineNumbers "Templates\muyMalosVanilla.sqf"} else {call compile preProcessFileLineNumbers "Templates\muyMalosRHSAFRF.sqf"};
+	if (!activeAFRF) then {call compile preProcessFileLineNumbers "Templates\muyMalosVanillaAltis.sqf"} else {call compile preProcessFileLineNumbers "Templates\muyMalosRHSAFRF.sqf"};
 
 	if (!activeGREF) then
 		{
-		call compile preProcessFileLineNumbers "Templates\buenosVanilla.sqf"
+		call compile preProcessFileLineNumbers "Templates\buenosVanillaAltisB.sqf"
 		}
 	else
 		{
@@ -521,8 +521,8 @@ server setVariable [vehSDKTruck,300,true];//300
 {server setVariable [_x,700,true]} forEach [vehSDKLightArmed,vehSDKAT];
 {server setVariable [_x,400,true]} forEach [SDKMGStatic,vehSDKBoat,vehSDKRepair];//400
 {server setVariable [_x,800,true]} forEach [SDKMortar,staticATBuenos,staticAABuenos];//800
-server setVariable ["hr",8,true];//initial HR value
-server setVariable ["resourcesFIA",1000,true];//Initial FIA money pool value
+server setVariable ["hr",12,true];//initial HR value
+server setVariable ["resourcesFIA",2000,true];//Initial FIA money pool value
 skillFIA = 0;//Initial skill level for FIA soldiers
 prestigeNATO = 5;//Initial Prestige NATO
 prestigeCSAT = 5;//Initial Prestige CSAT
@@ -564,17 +564,17 @@ if (!activeGREF) then
     {
     if !(hayIFA) then
     	{
-	    unlockedWeapons = ["hgun_PDW2000_F","hgun_Pistol_01_F","hgun_ACPC2_F","Binocular","SMG_05_F","SMG_02_F"];//"LMG_03_F"
-		unlockedRifles = ["hgun_PDW2000_F","arifle_AKM_F","arifle_AKS_F","SMG_05_F","SMG_02_F"];//standard rifles for AI riflemen, medics engineers etc. are picked from this array. Add only rifles.
-		unlockedMagazines = ["9Rnd_45ACP_Mag","30Rnd_9x21_Mag","30Rnd_762x39_Mag_F","MiniGrenade","1Rnd_HE_Grenade_shell","30Rnd_545x39_Mag_F","30Rnd_9x21_Mag_SMG_02","10Rnd_9x21_Mag","200Rnd_556x45_Box_F","IEDLandBig_Remote_Mag","IEDUrbanBig_Remote_Mag","IEDLandSmall_Remote_Mag","IEDUrbanSmall_Remote_Mag"];
-		initialRifles = ["hgun_PDW2000_F","arifle_AKM_F","arifle_AKS_F","SMG_05_F","SMG_02_F"];
+	    unlockedWeapons = ["SMG_03C_khaki","hgun_PDW2000_F","hgun_Pistol_01_F","hgun_ACPC2_F","Binocular","SMG_05_F","SMG_02_F"];//"LMG_03_F"
+		unlockedRifles = ["SMG_03C_khaki","hgun_PDW2000_F","arifle_AKM_F","arifle_AKS_F","SMG_05_F","SMG_02_F"];//standard rifles for AI riflemen, medics engineers etc. are picked from this array. Add only rifles.
+		unlockedMagazines = ["50Rnd_570x28_SMG_03","9Rnd_45ACP_Mag","30Rnd_9x21_Mag","30Rnd_762x39_Mag_F","MiniGrenade","1Rnd_HE_Grenade_shell","30Rnd_545x39_Mag_F","30Rnd_9x21_Mag_SMG_02","10Rnd_9x21_Mag","200Rnd_556x45_Box_F","IEDLandBig_Remote_Mag","IEDUrbanBig_Remote_Mag","IEDLandSmall_Remote_Mag","IEDUrbanSmall_Remote_Mag"];
+		initialRifles = ["SMG_03C_khaki","hgun_PDW2000_F","arifle_AKM_F","arifle_AKS_F","SMG_05_F","SMG_02_F"];
 		//unlockedItems = unlockedItems + ["V_Chestrig_khk","V_BandollierB_cbr","V_BandollierB_rgr","U_C_HunterBody_grn"];
 		if !(isMultiplayer) then
 			{
 			unlockedWeapons append ["arifle_AKM_F","arifle_AKS_F"];
 			unlockedRifles append ["arifle_AKM_F","arifle_AKS_F"];
 			initialRifles append ["arifle_AKM_F","arifle_AKS_F"];
-			if (worldName == "Tanoa") then
+			if (worldName == "Malden") then
 				{
 				unlockedWeapons pushBack "launch_RPG7_F";
 				unlockedAT = ["launch_RPG7_F"];

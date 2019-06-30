@@ -61,7 +61,7 @@ if (not("FirstAidKit" in (items _curandero))) then
 	};
 _timer = if ([_curado] call A3A_fnc_fatalWound) then
 			{
-			time + 35 + (random 20)
+			time + 15 + (random 5)
 			}
 		else
 			{
@@ -71,7 +71,7 @@ _timer = if ([_curado] call A3A_fnc_fatalWound) then
 				}
 			else
 				{
-				time + 15 + (random 10)
+				time + 10 + (random 5)
 				};
 			};
 

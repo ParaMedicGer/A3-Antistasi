@@ -22,7 +22,8 @@ misiones pushBack ["DEF_HQ","CREATED"]; publicVariable "misiones";
 _tiposVeh = if (_lado == malos) then {vehNATOAttackHelis} else {vehCSATAttackHelis};
 _tiposVeh = _tiposVeh select {[_x] call A3A_fnc_vehAvailable};
 
-if (count _tiposVeh > 0) then
+sleep (300 + random 60);
+if (count _tiposVeh > 0) and (random 5>2) then
 	{
 	_tipoVeh = selectRandom _tiposVeh;
 	//_pos = [_posicion, distanciaSPWN * 3, random 360] call BIS_Fnc_relPos;

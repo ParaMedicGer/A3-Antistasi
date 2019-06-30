@@ -1,12 +1,12 @@
 #include "defines.hpp"
 #include "dialogs.hpp"
 
-author="Barbolani, ported by ParaMedic/Mojo";
-OnLoadName = "Antistasi Malden";
-OnLoadMission = "Free Malden from oppression!";
+author="Barbolani, ported: Evoke, refined: ParaMedic";
+OnLoadName = "Malden";
+OnLoadMission = "The mountains are on fire...";
 loadScreen = "pic.JPG";
 
-overviewText = "Join Maldens resistance. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics to gain the upper hand.";
+overviewText = "Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics against your enemy.";
 overviewPicture = "pic.jpg";
 
 allowFunctionsLog = 1;
@@ -132,7 +132,7 @@ class Params
         title = "Allow Friendly Player Markers";
         values[] = {1,0};
         texts[] = {"Yes","No"};
-        default = 0;
+        default = 1;
         //file = "setViewDistance.sqf"; // (Optional) Script [[call]]ed when player joins, selected value is passed as an argument
     };
     class AISkill
@@ -140,7 +140,7 @@ class Params
         title = "AI Skill";
         values[] = {0.5,1,2};
         texts[] = {"Easy","Normal","Hard"};
-        default = 1;
+        default = "0.5";
         //file = "setViewDistance.sqf"; // (Optional) Script [[call]]ed when player joins, selected value is passed as an argument
     };
     class unlockItem
@@ -171,7 +171,7 @@ class Params
         title = "Max distance non members can be from the closest member or HQ (they will be teleported to HQ after some timeout)";
         values[] = {4000,5000,6000,7000,8000,16000};
         texts[] = {"4 Kmts","5 Kmts","6 Kmts","7 Kmts","8 Kmts","Unlimited"};
-        default = 5000;
+        default = 8000;
         //file = "setViewDistance.sqf"; // (Optional) Script [[call]]ed when player joins, selected value is passed as an argument
     };
     class allowFT
@@ -187,139 +187,156 @@ class CfgIdentities
 {
     class protagonista
     {
-        name = "Cloude";
-        face="WhiteHead_01";
+        name = "Stavros";
+        nameSound = "Stavrou";
+        face="GreekHead_A3_01";
     glasses="None";
-    speaker="male02engfre";
-    pitch=1.0;
+    speaker="Male01GRE";
+    pitch=1.1;
     };
      class amiguete
     {
-        name = "Jacque";
-        face="WhiteHead_08";
+        name = "Petros";
+        nameSound = "Petros";
+        face="GreekHead_A3_01";
     glasses="None";
-    speaker="male01engfre";
+    speaker="Male01GRE";
     pitch=1.1;
     };
       class Anthis
     {
-        name = "Timeo";
-        face="WhiteHead_02";
+        name = "Anthis";
+        nameSound = "Anthis";
+        face="GreekHead_A3_02";
     glasses="None";
-    speaker="male01engfre";
+    speaker="Male01GRE";
     pitch=1.1;
     };
       class Costa
     {
-        name = "Baptiste";
-        face="GreekHead_A3_07";
+        name = "Costa";
+        nameSound = "Costa";
+        face="GreekHead_A3_03";
     glasses="None";
-    speaker="male01fre";
+    speaker="Male02GRE";
     pitch=1.1;
     };
       class Dimitirou
     {
-        name = "Adrien";
-        face="WhiteHead_07";
+        name = "Dimitirou";
+        nameSound = "Dimitirou";
+        face="GreekHead_A3_04";
     glasses="None";
-    speaker="male02fre";
+    speaker="Male03GRE";
     pitch=1.1;
     };
       class Elias
     {
         name = "Elias";
+        nameSound = "Elias";
         face="GreekHead_A3_05";
     glasses="None";
-    speaker="male03fre";
-    pitch=1.2;
+    speaker="Male04GRE";
+    pitch=1.1;
     };
       class Gekas
     {
-        name = "Luka";
+        name = "Gekas";
+        nameSound = "Gekas";
         face="GreekHead_A3_06";
     glasses="None";
-    speaker="male02engfre";
-    pitch=1.0;
+    speaker="Male01GRE";
+    pitch=1.1;
     };
       class Kouris
     {
-        name = "Matheo";
+        name = "Kouris";
+        nameSound = "Kouris";
         face="GreekHead_A3_07";
     glasses="None";
-    speaker="male02engfre";
+    speaker="Male02GRE";
     pitch=1.1;
     };
       class Leventis
     {
-        name = "Pierre";
-        face="WhiteHead_08";
+        name = "Leventis";
+        nameSound = "Leventis";
+        face="GreekHead_A3_08";
     glasses="None";
-    speaker="male02engfre";
-    pitch=0.9;
+    speaker="Male03GRE";
+    pitch=1.1;
     };
       class Markos
     {
-        name = "Gaspard";
-        face="Ioannou";
+        name = "Markos";
+        nameSound = "Markos";
+        face="GreekHead_A3_09";
     glasses="None";
-    speaker="male03fre";
+    speaker="Male04GRE";
     pitch=1.1;
     };
       class Nikas
     {
-        name = "Jean";
-        face="WhiteHead_16";
+        name = "Nikas";
+        nameSound = "Nikas";
+        face="WhiteHead_02";
     glasses="None";
-    speaker="male02engfre";
-    pitch=1.2;
+    speaker="Male01GRE";
+    pitch=1.1;
     };
       class Nicolo
     {
-        name = "Damien";
-        face="WhiteHead_11";
+        name = "Nicolo";
+        nameSound = "Nicolo";
+        face="WhiteHead_03";
     glasses="None";
-    speaker="male03fre";
-    pitch=0.9;
+    speaker="Male02GRE";
+    pitch=1.1;
     };
       class Panas
     {
-        name = "Thibaut";
-        face="WhiteHead_10";
+        name = "Panas";
+        nameSound = "Panas";
+        face="WhiteHead_04";
     glasses="None";
-    speaker="male01engfre";
-    pitch=1.2;
+    speaker="Male03GRE";
+    pitch=1.1;
     };
        class Rosi
     {
-        name = "Charlie";
-        face="Mavros";
+        name = "Rosi";
+        nameSound = "Rosi";
+        face="WhiteHead_05";
     glasses="None";
-    speaker="male02fre";
-    pitch=1.0;
+    speaker="Male04GRE";
+    pitch=1.1;
     };
        class Samaras
     {
-        name = "Augustin";
-        face="WhiteHead_17";
+        name = "Samaras";
+        nameSound = "Samaras";
+        face="WhiteHead_06";
     glasses="None";
-    speaker="male01engfre";
-    pitch=1.0;
+    speaker="Male01GRE";
+    pitch=1.1;
     };
        class Thanos
     {
-        name = "Bastien";
-        face="WhiteHead_12";
+        name = "Thanos";
+        nameSound = "Thanos";
+        face="WhiteHead_07";
     glasses="None";
-    speaker="male01fre";
-    pitch=0.9;
+    speaker="Male02GRE";
+    pitch=1.1;
     };
        class Vega
     {
-        name = "Leon";
-        face="WhiteHead_14";
+        name = "Vega";
+        nameSound = "Vega";
+        face="WhiteHead_08";
     glasses="None";
-    speaker="male02fre";
-    pitch=1.2;
+    speaker="Male03GRE";
+    pitch=1.1;
     };
 };
 
@@ -341,39 +358,39 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "VICTORY";
-		subtitle = "Malden is ours!";
-		description = "Our forces seized control of Malden.<br/>The infrastructur and economy lies in ruins, a third of the population has fled, another third died during the war and now you are just another thug of the new warlord.";
+		title = "V I C T O R Y";
+		subtitle = "Malden is Ours!";
+		description = "The population of Malden still suffers from the long atrocious civil war.<br/>You foolhardy followed just another warlord who has already sold his soul to foreign powers.<br/>Many have died, nothing will ever be the same.";
 		picture = "n_inf";
 		pictureColor[] = {0.0,0.5,0.0,1};
 	};
     class petrosDead
     {
-        title = "Jacque is dead";
-        subtitle = "Jacque is dead";
-        description = "Jacque was killed. Without our great leader there is no revolution.";
+        title = "Petros is Dead";
+        subtitle = "Petros dead in apparent suicide";
+        description = "Congratulations!: The radical guerrilla leader 'shot himself' to avoid imprisonment and torture. Without our strong leader all hope is lost.";
         picture = "b_unknown";
         pictureColor[] = {0.5,0.0,0.0,1};
     };
     class destroyedCities
     {
-        title = "Malden is destroyed";
-        subtitle = "Malden is in ruins";
-        description = "One half of the population of Malden has been killed in this gruesome war.<br/>Malden no longer exists, nobody wants to live here.";
+        title = "Malden is Destroyed";
+        subtitle = "Malden got Destroyed by OPFOR";
+        description = "One third of the population in Malden has been massacred.<br/>Piles of bodies line the streets, nobody wants to live here anymore.";
         picture = "b_unknown";
         pictureColor[] = {0.5,0.0,0.0,1};
     };
     class modUnautorized
     {
-        title = "Incompatible mods";
-        subtitle = "Incompatible mods detected";
-        description = "An incompatible mod is installed on the server or on your PC. Please uninstall unsupported mods (ASR AI, aLIVE, MCC or any AI behaviour) from your computer or server to be able to play Antistasi.";
+        title = "Incompatible Mods";
+        subtitle = "Incompatible Mods detected";
+        description = "An incompatible mod installed on the server or your PC has been detected. To avoid support problems the mission is finished. Please uninstall unsupported (ASR AI, aLIVE, MCC or any AI behaviour) mods from your computer or server to be able to play Antistasi.";
         picture = "b_unknown";
         pictureColor[] = {0.0,0.5,0.0,1};
     };
     class serverFull
     {
-        title = "Reserved slot";
+        title = "Reserved Slot";
         subtitle = "This slot is reserved";
         description = "Sorry, but this slot is reserved for a Server Member. To become member, please contact to the server admin or clan.";
         picture = "b_unknown";
@@ -381,16 +398,16 @@ class CfgDebriefing
     };
     class noPvP
     {
-        title = "Slot unavailable";
+        title = "Slot Unavailable";
         subtitle = "This slot is unavailable";
-        description = "Sorry, but this slot is unavailable for some reason.";
+        description = "Sorry, but this slot is unavailable for some reson: player not member, match not initialised, lack of Syndikat commander or recent role as Syndikat.";
         picture = "b_unknown";
         pictureColor[] = {0.0,0.5,0.0,1};
     };
     class hcDown
     {
-        title = "HC disconnected";
-        subtitle = "A Headless Client has been disconnected and the mission has to stop to avoid malfunctions.";
+        title = "HC Disconnected";
+        subtitle = "Some Headless Client has been disconnected and mission has to stop to avoid malfunctions.";
         picture = "b_unknown";
         pictureColor[] = {0.0,0.5,0.0,1};
     };

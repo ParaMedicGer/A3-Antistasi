@@ -8,11 +8,11 @@ _controlesCSAT = [];
 if (gameMode == 1) then
 	{
     _controlesNATO = controles;
-	if (worldName == "Tanoa") then
+	if (worldName == "Malden") then
 	    {
-	    _mrkCSAT = ["airport_1","puerto_5","puesto_10","control_20"];
-	    _controlesNATO = _controlesNATO - ["control_20"];
-	    _controlesCSAT = ["control_20"];
+	    _mrkCSAT = ["airport","puerto_4","puesto_4","control_4","control_17","puesto_3"];
+	    _controlesNATO = _controlesNATO - ["control_4","control_17"];
+	    _controlesCSAT = ["control_4","control_17"];
 	    }
 	else
 	    {

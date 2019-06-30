@@ -22,8 +22,12 @@ if (side _injurer == buenos) then
 				{
 				_unit setVariable ["INCAPACITATED",true,true];
 				_unit setUnconscious true;
-				_dam = 0.9;
+				if (random 100 <= 5) then
+				{  _dam = 0.9;
 				[_unit,_injurer] spawn A3A_fnc_inconscienteAAF;
+				}
+				else
+				{_dam = 1;};
 				}
 			else
 				{
