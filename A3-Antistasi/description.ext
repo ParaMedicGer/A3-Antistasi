@@ -196,11 +196,10 @@ class CfgIdentities
     };
      class amiguete
     {
-        name = "Petros";
-        nameSound = "Petros";
-        face="GreekHead_A3_01";
+        name = "Jacque";
+        face="WhiteHead_08";
     glasses="None";
-    speaker="Male01GRE";
+    speaker="male01engfre";
     pitch=1.1;
     };
       class Anthis
@@ -360,15 +359,15 @@ class CfgDebriefing
 	{
 		title = "V I C T O R Y";
 		subtitle = "Altis is Ours!";
-		description = "The population of Altis loves you!<br/>The brave soldiers prooved their valour, and Barbolani, Altis new Prime Minister, could at last to have a nice holidays. A deserved rest in a Greek island, drinking with Petros, his war master.";
+		description = "The population of Altis loves you!<br/>The brave soldiers prooved their valour, and Barbolani, Altis new Prime Minister, could at last to have a nice holidays. A deserved rest in a Greek island, drinking with Jacque, his war master.";
 		picture = "n_inf";
 		pictureColor[] = {0.0,0.5,0.0,1};
 	};
     class petrosDead
     {
-        title = "Petros is Dead";
-        subtitle = "Petros is Dead";
-        description = "Congratulations!: Petros is Dead. Now with rebels without a leader, you may think about joining them, and free Altis";
+        title = "Jacque is Dead";
+        subtitle = "Jacque is Dead";
+        description = "Congratulations!: Jacque is Dead. Now with rebels without a leader, you may think about joining them, and free Altis";
         picture = "b_unknown";
         pictureColor[] = {0.5,0.0,0.0,1};
     };

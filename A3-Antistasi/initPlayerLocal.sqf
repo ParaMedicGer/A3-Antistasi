@@ -619,7 +619,7 @@ _nul = [player] execVM "OrgPlayers\unitTraits.sqf";
 grupoPetros = group petros;
 grupoPetros setGroupIdGlobal ["Petros","GroupColor4"];
 petros setIdentity "amiguete";
-petros setName "Petros";
+petros setName "Jacque";
 petros disableAI "MOVE";
 petros disableAI "AUTOTARGET";
 petros addAction ["Mission Request", {nul=CreateDialog "mission_menu";},nil,0,false,true,"","_this == theBoss"];
