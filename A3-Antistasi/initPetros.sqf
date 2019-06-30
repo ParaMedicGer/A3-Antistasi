@@ -1,4 +1,3 @@
-removeHeadgear petros;
 removeGoggles petros;
 petros setSkill 1;
 petros setVariable ["respawning",false];
